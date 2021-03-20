@@ -1,0 +1,15 @@
+l = []
+n = int(input())
+suum = 0
+for i in range(0, n):
+    a, b, c, tt = [int(x) for x in input().split()]
+    tr = (a+b+c+tt)-(3*(max(a,b,c)))
+    if tr >= 0:
+        if tr ==0 or tr % 3==0:
+            l.append("YES")
+        else:
+            l.append("NO")
+    else:
+        l.append("No")
+for i in l:
+    print(i)
