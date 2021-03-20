@@ -1,0 +1,16 @@
+n = []
+row = 0
+col = 0
+for rr in range(0, 5):
+    n.append(input().split())
+ 
+for i in range(0, 5):
+    for t in range(0, 5):
+        if n[i][t] == "1":
+            row = i
+            col = t
+            break
+ 
+row = abs(2 - row)
+col = abs(col - 2)
+print(row + col)
