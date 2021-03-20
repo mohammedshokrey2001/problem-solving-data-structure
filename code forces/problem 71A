@@ -1,0 +1,15 @@
+n = int(input())
+f_list =[]
+for i in range(0,n):
+
+    st = input()
+
+    if len(st)>10:
+        sp = st[0]+str(len(st)-2)+st[len(st)-1]
+        f_list.append(sp)
+
+    else:
+        f_list.append(st)
+
+for word in f_list:
+    print(word)
