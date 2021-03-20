@@ -1,0 +1,12 @@
+t=""
+v = ["A", "O", "Y", "E", "U", "I", "a", "o", "y", "e", "u","i"]
+st = input()
+ 
+ 
+for n in st:
+    if n in v:
+        st = st.replace(n, "")
+st = st.lower()
+for i in st:
+    t = t+"."+i
+print(t)
