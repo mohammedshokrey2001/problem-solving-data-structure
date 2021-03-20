@@ -1,0 +1,21 @@
+s = input().split("+")
+ 
+one = s.count("1")
+two = s.count("2")
+three = s.count("3")
+new_sum = ""
+for i in range(0,one):
+    new_sum = new_sum +"1"+"+"
+ 
+for i in range(0,two):
+    new_sum = new_sum +"2"+"+"
+ 
+ 
+for i in range(0,three):
+    new_sum = new_sum +"3"+"+"
+ 
+ 
+if new_sum[len(new_sum)-1] =="+":
+    new_sum = new_sum[0:(len(new_sum)-1)]
+ 
+print(new_sum)
