@@ -1,0 +1,23 @@
+n=0
+t=0
+st = input()
+for i in st:
+ 
+    if i == "1":
+       n= n+1
+       if n == 7:
+           print("YES")
+           break
+    else:
+        n=0
+ 
+    if i == "0":
+        t= t+1
+        if t == 7:
+            print("YES")
+            break
+    else:
+        t=0
+ 
+if n<7 and t<7 :
+    print('NO')
