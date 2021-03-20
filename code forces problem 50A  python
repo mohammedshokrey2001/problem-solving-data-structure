@@ -1,0 +1,8 @@
+n = input().split()
+ 
+area = int(n[0])*int(n[1])
+ 
+if area%2 != 0 :
+    area = area-1
+ 
+print(int(area/2))
