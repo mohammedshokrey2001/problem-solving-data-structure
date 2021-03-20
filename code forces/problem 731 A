@@ -1,0 +1,13 @@
+total = 0
+st = input()
+st = "a"+st
+ 
+for i in range(0, len(st)-1):
+    t=0
+    t = abs(ord(st[i+1]) - ord(st[i]))
+    if t >13 :
+        t = 26-t
+        total = total+t
+    else:
+        total = total+t
+print(total)
