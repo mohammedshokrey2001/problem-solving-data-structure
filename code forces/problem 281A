@@ -1,0 +1,10 @@
+lis = []
+st = input()
+
+for i in st :
+    lis.append(i)
+lis[0] = lis[0].upper()
+st = ""
+for i in lis:
+    st = st +i
+print(st)
