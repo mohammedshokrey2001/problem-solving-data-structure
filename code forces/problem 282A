@@ -1,0 +1,11 @@
+num = 0
+po = ["++X","X++"]
+ne = ["--X","X--"]
+n = int(input())
+for i in range (0,n):
+   st = input()
+   if st in po:
+       num = num+1
+   if st in ne :
+       num = num-1
+print(num)
