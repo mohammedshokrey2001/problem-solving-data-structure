@@ -1,0 +1,16 @@
+l = []
+count = 0
+num, k = input().split()
+num = int(num)
+k = int(k)
+ 
+l[0:num] = input().split()
+t = int(l[k-1])
+ 
+ 
+for i in range(0, num):
+    nn = int(l[i])
+    if nn >= t and nn>0:
+        count = count + 1
+ 
+print(count)
