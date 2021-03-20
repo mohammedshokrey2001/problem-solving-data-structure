@@ -1,0 +1,34 @@
+#include <iostream>
+#include<string>
+using namespace std;
+ 
+int main()
+{
+    string st;
+    char ch;
+    bool mar = true;
+    cin >> st;
+ 
+    for (int i = 1; i < st.length(); i++)
+    {
+        if (islower(st[i]))
+        {
+            mar = false;
+        }
+    }
+ 
+    if (mar == true)
+    {
+        for (int n = 0; n < st.length(); n++)
+        {
+            if (islower(st[n]))
+                ch = toupper(st[n]);
+            else
+                ch = tolower(st[n]);
+            cout << ch;
+        }
+    }
+    else
+        cout << st;
+    return 0;
+}
