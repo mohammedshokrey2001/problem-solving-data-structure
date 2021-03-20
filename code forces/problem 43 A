@@ -1,0 +1,21 @@
+n = int(input())
+g1, g2 = 0, 0
+team_1 = input()
+g1 = g1+1
+team_2 = ""
+if n == 1:
+    print(team_1)
+else:
+ n=n-1
+ for i in range(0, n ):
+    r = input()
+    if r == team_1:
+        g1 = g1 + 1
+    else:
+        team_2 = r
+        g2 = g2 + 1
+ 
+ if g1>g2:
+     print(team_1)
+ else:
+     print(team_2)
