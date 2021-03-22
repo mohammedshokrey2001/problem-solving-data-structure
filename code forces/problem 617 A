@@ -1,0 +1,23 @@
+num = int(input())
+a = [5, 4, 3, 2, 1]
+count = 0
+i = 0
+
+if num <= 5:
+    print(1)
+
+else:
+
+    while num != 0:
+        flag = num
+
+        if (flag - a[i]) >= 0:
+            count = count + 1
+            num = num - a[i]
+
+        else:
+            i = i + 1
+
+
+    print(count)
+
