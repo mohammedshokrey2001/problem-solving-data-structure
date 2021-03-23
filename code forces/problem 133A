@@ -1,0 +1,13 @@
+st = input()
+ls = ["H","Q","9"]
+count = 0
+for i in st:
+  if i  in ls:
+    count+=1
+
+
+if count==0:
+    print("NO")
+
+else:
+    print("YES")
