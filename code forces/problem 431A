@@ -1,0 +1,19 @@
+def main():
+    a1,a2,a3,a4 = [int(i) for i in input().split()]
+    st  =input()
+    sum = 0
+    for i in st:
+        if i =="1":
+          sum = sum + a1
+        elif i == "2":
+            sum = sum +a2
+        elif i == "3":
+            sum = sum +a3
+        elif i == "4":
+            sum = sum +a4
+
+    print(sum)
+if __name__ == '__main__':
+    main()
+
+
