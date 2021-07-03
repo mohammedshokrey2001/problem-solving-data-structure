@@ -1,0 +1,33 @@
+  def main():
+    n = int(input())
+    li = list(map(int, input().split()))
+    if n == 2:
+        print(0)
+    else:
+        c = 0
+        dic = {}
+        for i in range(n):
+            if li[i] in dic.keys():
+                dic[li[i]].append(i + 1)
+            else:
+                dic[li[i]] = [i + 1]
+        li.sort()
+        s = sum(li)
+        e = []
+        for i in range(0, n - 1):
+            x = s - li[i]
+            if x - li[-1] == li[-1]:
+                c += 1
+                e.append(li[i])
+        if li[-2] == sum(li[:n - 2]):
+            c += 1
+            e.append(li[-1])
+        print(c)
+        e = list(set(e))
+        ans = []
+        for ele in e:
+            ans += dic[ele]
+        print(" ".join([str(ele) for ele in ans]))
+        
+if __name__ == '__main__':
+    main()
