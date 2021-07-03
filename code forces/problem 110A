@@ -1,0 +1,12 @@
+def main():
+    st = input()
+    sev = st.count("7")
+    f = st.count("4")
+    if sev + f == 4 or sev +f == 7 :
+        print("YES")
+    else:
+        print("NO")
+
+
+if __name__ == '__main__':
+    main()
