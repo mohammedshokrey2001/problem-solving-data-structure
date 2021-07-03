@@ -1,0 +1,22 @@
+def main():
+
+    st = input()
+    ch_up = 0
+    ch_lw = 0
+
+    for i in st :
+        if i.islower():
+            ch_lw +=1
+        else:
+            ch_up +=1
+
+    if ch_up >ch_lw :
+        print(st.upper())
+    elif ch_lw >= ch_up:
+        print(st.lower())
+
+
+if __name__ == '__main__':
+    main()
+
+
