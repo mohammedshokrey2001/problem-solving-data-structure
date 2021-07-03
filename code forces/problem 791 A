@@ -1,0 +1,17 @@
+def main():
+
+
+    a,b = [int(r) for r in input().split()]
+
+    poninter = 0
+    while a <= b:
+        a = a*3
+        b = b*2
+        poninter = poninter + 1
+    print(poninter)
+
+
+
+
+if __name__ == '__main__':
+    main()
