@@ -1,0 +1,14 @@
+def main():
+
+    n , nt = [int(i) for i in input().split()]
+
+    for i in range (0,nt):
+        if n%10 ==0:
+            n = n/10
+        else:
+            n= n-1
+
+    print(int(n))
+
+if __name__ == '__main__':
+    main()
