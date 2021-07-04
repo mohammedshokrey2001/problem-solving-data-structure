@@ -1,0 +1,14 @@
+def main():
+    n = int(input())
+    ls = [int(i) for i in input().split()]
+    lss = [0]
+    for i in range(0, len(ls)):  # 0 1 2 3
+        b = ls[i]
+        lss.insert(b, i + 1)
+
+    for i in range(1,len(lss)):
+        print(lss[i],end=" ")
+
+
+if __name__ == '__main__':
+    main()
