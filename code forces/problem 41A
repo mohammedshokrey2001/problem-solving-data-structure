@@ -1,0 +1,15 @@
+def main():
+    st1 = input()
+    st2 = input()
+    pointer = 0
+    for i in range(0, len(st1)):
+        if st1[i] == st2[len(st2) - i-1]:
+            pointer += 1
+    if pointer == len(st1):
+        print("YES")
+    else:
+        print("NO")
+
+
+if __name__ == '__main__':
+    main()
