@@ -1,0 +1,16 @@
+def main():
+    n, l = [int(i) for i in input().split()]
+    ls = [int(i) for i in input().split()]
+    maxx = 0
+
+    ls.sort()
+
+    maxx = max(ls[0], l - ls[n - 1]) * 2
+
+    for i in range(0, n-1):
+        maxx = max(maxx, (ls[i + 1] - ls[i]))
+    print(maxx/2)
+
+
+if __name__ == '__main__':
+    main()
