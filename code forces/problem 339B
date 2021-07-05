@@ -1,0 +1,17 @@
+def main():
+    n_house, number_tasks = [int(x) for x in input().split()]
+    lis_items = [int(x) for x in input().split()]
+    total_movements = 0
+    total_movements = total_movements + (lis_items[0] - 1)
+
+    for i in range(1, len(lis_items)):
+        if lis_items[i] >= lis_items[i - 1]:
+            total_movements = total_movements + (lis_items[i] - lis_items[i - 1])
+        else:
+            total_movements = total_movements + (n_house - (lis_items[i-1]-lis_items[i]))
+
+    print(total_movements)
+
+
+if __name__ == '__main__':
+    main()
