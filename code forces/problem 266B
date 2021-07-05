@@ -1,0 +1,20 @@
+def main():
+    num_children, time_to_transform = [int(x) for x in input().split()]
+    queu = input()
+    queu = list(queu)
+
+    for i in range(0, time_to_transform):
+        x = 0
+        while x < len(queu) - 1:
+            if queu[x] == "B" and queu[x + 1] == "G":
+                queu[x], queu[x + 1] = queu[x + 1], queu[x]
+                x = x + 2
+            else:
+                x = x + 1
+
+    for x in queu:
+        print(x, end="")
+
+
+if __name__ == '__main__':
+    main()
