@@ -1,0 +1,20 @@
+def main():
+    number = int(input())
+    st = input()
+    a ,d = 0,0
+
+    for i in st :
+        if i =="A" :
+            a+=1
+        else:
+            d+=1
+
+    if a >d :
+        print("Anton")
+    elif d>a :
+        print("Danik")
+    else:
+        print("Friendship")
+
+if __name__ == '__main__':
+    main()
