@@ -1,0 +1,3 @@
+m,s=[int(x) for x in input().split()]
+if s>9*m or (s<1and m!=1):print(-1,-1)
+else:print(int(10**(m-1)+((s-1)%9+1)*10**((s-1)//9)-1),10**m-10**(m-(s-1)//9-1)*(9-(s-1)%9))
