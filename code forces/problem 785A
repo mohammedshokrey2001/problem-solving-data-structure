@@ -1,0 +1,19 @@
+def main():
+    n_test = int(input())
+    total = 0
+    for i in range(0, n_test):
+        a = input()
+        if a =="Tetrahedron":
+            total = total +4
+        elif a=="Cube":
+            total = total +6
+        elif a=="Octahedron":
+            total = total +8
+        elif a=="Dodecahedron":
+            total = total +12
+        elif a == "Icosahedron":
+            total = total + 20
+    print(total)
+
+if __name__ == '__main__':
+    main()
