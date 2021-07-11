@@ -1,0 +1,13 @@
+def main():
+    n_test = int(input())
+    for i in range(0, n_test):
+        a = int(input())
+        if a%2==0:
+            print((int(a/2)-1))
+        else:
+            print(int((a-1)/2))
+
+
+
+if __name__ == '__main__':
+    main()
