@@ -1,0 +1,13 @@
+def main():
+    n_test = int(input())
+    for i in range(0, n_test):
+        a, b = [int(x) for x in input().split()]
+
+        if a%b ==0 :
+            print(0)
+        else:
+            r = a%b
+            print(b-r)
+
+if __name__ == '__main__':
+    main()
