@@ -1,0 +1,15 @@
+def main():
+    n = int(input())
+    counter = 0
+
+    for i in range(0, n):
+        a, b = [int(x) for x in input().split()]
+
+        if a < b and b-a>=2:
+            counter += 1
+
+    print(counter)
+
+
+if __name__ == '__main__':
+    main()
