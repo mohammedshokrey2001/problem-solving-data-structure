@@ -1,0 +1,14 @@
+def main():
+    st = input()
+    count = 0
+    for i in st:
+        if i == "H" or i == "Q" or i == "9":
+            count += 1
+    if count >= 1:
+        print("YES")
+    else:
+        print("NO")
+
+
+if __name__ == '__main__':
+    main()
