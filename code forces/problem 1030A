@@ -1,0 +1,15 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+    a = 0
+    for i in lis :
+        if i ==1 :
+            print("HARD")
+            break
+        else:
+            a = a+1
+    if a == len(lis) :
+        print("EASY")
+
+if __name__ == '__main__':
+    main()
