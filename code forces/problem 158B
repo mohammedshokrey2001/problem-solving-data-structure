@@ -1,0 +1,40 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+
+    c1, c2, c3, c4 = 0, 0, 0, 0
+
+    for i in lis:
+
+        if i == 1:
+            c1 += 1
+
+        elif i == 2:
+            c2 += 1
+
+        elif i == 3:
+            c3 += 1
+
+        elif i == 4:
+            c4 += 1
+    summation = 0
+    summation = summation + c4
+
+    summation = summation + c2 // 2
+    c2 = c2 % 2
+    if c1 <= c3:
+        summation = summation + c1
+        summation = summation + c2
+        summation = summation + (c3 - c1)
+    else:
+        summation = summation + c3
+        summation = summation + (c1 - c3)
+        c1 %= 4
+        remain = c1 + c2 * 2
+        if remain > 0:
+            summation += 1 if remain <= 4 else 2
+    print(summation)
+
+
+if __name__ == '__main__':
+    main()
