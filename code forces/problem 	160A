@@ -1,0 +1,16 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+    lis.sort()
+    a = 0
+    count = 0
+    for i in range(1, len(lis)+1):
+        a = a + lis[len(lis) - i]
+        count += 1
+        if a > sum(lis) - a:
+            break
+    print(count)
+
+
+if __name__ == '__main__':
+    main()
