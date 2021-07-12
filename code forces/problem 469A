@@ -1,0 +1,28 @@
+def main():
+    n_levels = int(input())
+    player_1 = [int(x) for x in input().split()]
+    player_1 = player_1 [1:len(player_1)]
+
+    player_2 = [int(x) for x in input().split()]
+    player_2 = player_2[1:len(player_2)]
+
+
+    fin = player_1 + player_2
+    fin.sort()
+    fin = dict.fromkeys(fin)
+    fin = list(fin)
+
+
+
+
+
+
+
+    if len(fin) == n_levels:
+        print("I become the guy.")
+    else:
+        print("Oh, my keyboard!")
+
+
+if __name__ == '__main__':
+    main()
