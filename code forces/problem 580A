@@ -1,0 +1,17 @@
+def main():
+    n = int(input())
+    s = [int(x) for x in input().split()]
+    lis = []
+    n = 1
+    for i in range(0, len(s) - 1):
+        if s[i + 1] >= s[i]:
+            n = n + 1
+        else:
+            lis.append(n)
+            n = 1
+    lis.append(n)
+    print(max(lis))
+
+
+if __name__ == '__main__':
+    main()
