@@ -1,0 +1,15 @@
+def main():
+    n = int(input())
+    su = 0
+    lis = [100, 20, 10, 5, 1]
+
+    for i in lis:
+        a = n - (n % i)
+        su = su + a / i
+        n = n % i
+
+    print(int(su))
+
+
+if __name__ == '__main__':
+    main()
