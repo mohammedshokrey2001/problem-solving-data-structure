@@ -1,0 +1,20 @@
+def main():
+    n = int(input())
+    su = 0
+    lis = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+
+    for x in range (0,n):
+        su =0
+        a,b = [int(x)for x in input().split()]
+        xx = abs(a-b)
+        for i in lis:
+         a = xx - (xx % i)
+         su = su + a / i
+         xx = xx % i
+
+        print(int(su))
+
+
+if __name__ == '__main__':
+    main()
