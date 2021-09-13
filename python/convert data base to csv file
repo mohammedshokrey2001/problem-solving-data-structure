@@ -1,0 +1,53 @@
+import sqlite3 as sql
+import os
+import csv
+import pandas as pd
+
+
+def main():
+    # Connect to database
+    conn = sql.connect('mydb.db')
+
+    # Create Table into database
+    conn.execute('''CREATE TABLE IF NOT EXISTS Employee(Id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\
+               Name TEXT NOT NULL, Salary INT NOT NULL 
+              );''')
+    # Insert  values to database
+    conn.execute('''INSERT INTO Employee(Name, Salary) VALUES('Mohammed ', 30000);''')
+    conn.execute('''INSERT INTO Employee(Name, Salary) VALUES('ahmed', 40000);''')
+    conn.execute('''INSERT INTO Employee(Name, Salary) VALUES('ali', 30000);''')
+    conn.execute('''INSERT INTO Employee(Name, Salary) VALUES('abdu', 50000);''')
+    conn.execute('''INSERT INTO Employee(Name, Salary) VALUES('ghanem ', 60000);''')
+    conn.commit()
+
+    cur = conn.cursor()
+    cur.execute("UPDATE Employee set Name= 'mohammed ashraf' Where Id=1")
+    cur.execute('''SELECT * FROM Employee''')
+    rows = cur.fetchall()
+
+    # Export data into CSV file
+    cursor = conn.cursor()
+    cursor.execute("select * from Employee")
+    with open("employee_data.csv", "w") as csv_file:
+        csv_writer = csv.writer(csv_file, delimiter="\t")
+        csv_writer.writerow([i[0] for i in cursor.description])
+        csv_writer.writerows(cursor)
+
+    dirpath = os.getcwd() + "/employee_data.csv"
+    print("Data exported Successfully into {}".format(dirpath))
+    conn.close()
+
+
+# get data as data frame to analyse it
+
+data = pd.read_csv("employee_data.csv", "\t")
+data = pd.DataFrame(data)
+print(data.head(5))
+
+# test data
+print("the sum of all salaries is : ", data["Salary"].sum())
+print("the mean of all salaries is : ", data["Salary"].mean())
+print(data["Name"][4])
+
+if __name__ == '__main__':
+    main()
