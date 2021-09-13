@@ -1,0 +1,17 @@
+def main():
+    n = int(input())
+    s = 1
+    lis = []
+
+    for i in range(0, n):
+        lis.append(input())
+
+    for i in range(0, len(lis) - 1):
+        if lis[i] != lis[i + 1]:
+            s = s + 1
+
+    print(s)
+
+
+if __name__ == '__main__':
+    main()
