@@ -1,0 +1,14 @@
+def main():
+    a = input()
+    b = input()
+
+    res = ""
+    for i in range(0, len(a)):
+        if a[i]==b[i]:
+            res = res + "0"
+        else:
+            res = res + "1"
+    print(res)
+if __name__ == '__main__':main()
+
+
