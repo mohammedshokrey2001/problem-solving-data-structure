@@ -1,0 +1,25 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+
+    sereja = 0
+    dima = 0
+
+    turn = 1
+    while len(lis) > 0:
+        if lis[0] > lis[-1]:
+            mx = lis[0]
+            del lis[0]
+        else:
+            mx = lis[-1]
+            del lis[-1]
+        if turn % 2 == 0:
+            dima = dima + mx
+        else:
+            sereja = sereja + mx
+        turn = turn + 1
+
+    print(sereja, dima)
+
+
+if __name__ == '__main__': main()
