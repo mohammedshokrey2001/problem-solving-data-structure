@@ -1,0 +1,11 @@
+def main():
+    n = int(input())
+    lis = [int(x)for x in input().split()]
+
+    lis.sort()
+    for i in lis:
+        print(i,sep=" ",end=" ")
+
+
+
+if __name__ == '__main__': main()
