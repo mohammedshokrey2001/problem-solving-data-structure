@@ -1,0 +1,18 @@
+def main():
+    hate = "I hate "
+    love = "I love "
+    st = ""
+    n = int(input())
+    for i in range(0, n):
+        if i % 2 == 0:
+            st = st + hate
+        else:
+            st = st + love
+        if i != n - 1:
+            st = st + "that "
+        else:
+            st = st + "it "
+    print(st)
+
+
+if __name__ == '__main__': main()
