@@ -1,0 +1,33 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+    lef = []
+    rig = []
+    lis.sort()
+    max_va = max(lis)
+    temp = []
+    # left
+    for i in range(0, len(lis)):
+        if lis[i] not in lef and lis[i] < max_va:
+            lef.append(lis[i])
+
+        else:
+            temp.append(lis[i])
+
+    for i in range(0, len(temp)):
+
+        if temp[i] not in rig and temp[i] < max_va:
+            rig.append(temp[i])
+    rig.sort(reverse=True)
+    temp = [max_va]
+    lis = lef + temp + rig
+
+    print(len(lef) + len(rig) + len(temp))
+    
+    
+    for i in lis:
+        print(i, sep=" ", end=" ")
+
+
+if __name__ == '__main__':
+    main()
