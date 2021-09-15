@@ -1,0 +1,27 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+    lis_res = []
+
+    for i in range(0, len(lis)):
+        count = 1
+        for lef in range(i - 1, -1, -1):
+            if lis[lef] <= lis[lef + 1]:
+                count = count + 1
+            else:
+                break
+
+        for rig in range(i + 1, len(lis)):
+
+            if lis[rig] <= lis[rig - 1]:
+                count = count + 1
+            else:
+                break
+
+        lis_res.append(count)
+
+    print(max(lis_res))
+
+
+if __name__ == '__main__':
+    main()
