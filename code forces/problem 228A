@@ -1,0 +1,10 @@
+def main():
+    lis = [int(x)for x in input().split()]
+    m = 0
+    s = set(lis)
+    print(len(lis) - len(s))
+
+
+
+if __name__ == '__main__':
+    main()
