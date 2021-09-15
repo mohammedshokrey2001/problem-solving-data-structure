@@ -1,0 +1,21 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+    police = 0
+    crime = 0
+
+    for i in lis:
+        if i == -1:
+            if police == 0:
+                crime = crime + 1
+            else:
+                police = police - 1
+
+        else:
+            police = police + i
+
+    print(crime)
+
+
+if __name__ == '__main__':
+    main()
