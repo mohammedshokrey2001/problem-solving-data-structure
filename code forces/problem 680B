@@ -1,0 +1,29 @@
+def main():
+    n, city = [int(x) for x in input().split()]
+    city = city - 1
+    count = 0
+
+    lis = [int(x) for x in input().split()]
+
+    if lis[city]==1:
+        count  = count +1
+
+    for i in range(1,n):
+        lef,rig = 0,0
+        rig = city +i
+        lef = city -i
+
+        if lef >=0 or rig <n:
+            if lef >=0 and rig<n:
+                if lis[rig]==1 and lis[lef]==1:
+                    count =count +2
+            elif lef >=0:
+                if lis[lef]==1:
+                    count = count +1
+            elif rig<n:
+                if lis[rig] ==1:
+                    count = count +1
+
+    print(count)
+if __name__ == '__main__':
+    main()
