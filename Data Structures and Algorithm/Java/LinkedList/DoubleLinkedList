@@ -1,0 +1,152 @@
+package LinkedList;
+
+public class DoubleLinkedList {
+
+	 class DoubleNode{
+		 int value;
+		 DoubleNode nexNode;
+	 	 DoubleNode prvNode;
+         
+	 	 public DoubleNode(int data) {
+			// TODO Auto-generated constructor stub
+		
+	 		 this.value = data;
+	 		 this.nexNode = null;
+	 		 this.prvNode = null;
+	 	 }
+	 	 public DoubleNode() {
+			// TODO Auto-generated constructor stub
+		}
+	 	 
+	 }
+	
+	
+     private DoubleNode headNode  ;
+     private DoubleNode lastNode  ;
+
+	
+	public DoubleLinkedList() {
+		// TODO Auto-generated constructor stub
+
+ 	}
+	
+	public void insertFirst(int data) {
+		DoubleNode node = new DoubleNode(data);
+		DoubleNode node2 = new DoubleNode(data);
+
+		if (headNode ==null) {
+			headNode =lastNode = node;
+            
+    		headNode.nexNode = lastNode;
+    	    headNode.prvNode = null;
+    		lastNode.prvNode = headNode;
+    		lastNode.nexNode = null;
+		}
+		else {
+		
+		node.nexNode = headNode;
+		node.prvNode = null;
+		headNode.prvNode = node;	
+		headNode = node;
+		
+		}
+		
+	}
+	
+	
+	public void insertLast(int data) {
+		
+		DoubleNode node = new DoubleNode(data);
+
+		if (lastNode ==null) {
+			headNode =lastNode = node;
+            
+    		headNode.nexNode = lastNode;
+    	    headNode.prvNode = null;
+    		lastNode.prvNode = headNode;
+    		
+		}
+		
+		else {
+		
+			node.nexNode = null;
+			node.prvNode = lastNode;
+			lastNode.nexNode = node;
+			lastNode = node;
+			
+		}
+	}
+	
+	
+	public void displayFirst() {
+		DoubleNode node = headNode ;
+		System.out.print("{");
+		while (node!=null) {
+
+			System.out.print(node.value);
+			System.out.print(",");
+
+			node = node.nexNode;
+		}
+		System.out.print("}");
+
+	}
+
+	
+	public void displayLast() {
+		DoubleNode node = lastNode ;
+		System.out.print("{");
+		while (node!=null) {
+
+			System.out.print(node.value);
+			System.out.print(",");
+
+			node = node.prvNode;
+		}
+		System.out.print("}");
+
+	}
+
+	
+	public void deleteFirst() {
+		headNode = headNode.nexNode;
+		headNode.prvNode = null;
+		
+	}
+	
+	
+	public void deleteLast() {
+		lastNode = lastNode.prvNode;
+		lastNode.nexNode = null;
+		
+	}
+
+    public void deleteByValue(int value) {
+    	DoubleNode node = headNode ;
+		
+		while (node!=null) {
+			
+			if (node.value ==value) {
+				node.prvNode.nexNode = node.nexNode;
+				node.nexNode.prvNode = node.prvNode;
+			}
+			
+			node = node.nexNode;
+		}
+    	
+	}
+    public void insertAtPoint(int point ,int data) {
+		DoubleNode node = new DoubleNode(data);
+		DoubleNode workNode = headNode;
+		int count = 1;
+		while (count<point-1) {
+		
+			workNode = workNode.nexNode;
+			count+=1;
+		}
+		node.nexNode = workNode.nexNode;
+		node.prvNode = workNode;
+		workNode.nexNode.prvNode = node;
+		workNode.nexNode = node;
+	}
+}
