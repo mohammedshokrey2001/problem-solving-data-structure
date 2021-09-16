@@ -1,0 +1,197 @@
+package ARRAYS;
+
+
+public class Array1 {
+    
+	private int [] Array ;
+	int size = 0;
+	int i;
+	
+	
+	public Array1(int size) {
+		// TODO Auto-generated constructor stub
+	    Array = new int [size];
+	}
+	
+	public Array1() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	private void mian() {
+		// TODO Auto-generated method stub
+
+	}
+
+	 
+	// array simple functions 
+	public int [] getArray() {
+		return Array;
+	}
+
+    public void input(int i) {
+		Array[this.i] = i;
+		this.i+=1;
+	}
+    
+    public int  getValue(int index) {
+		return Array[index];
+	}
+
+	public void setArray(int [] array) {
+		Array = array;
+		
+	}
+	
+	public int getMaxValue() {
+		int maxValue = Array[0];
+		for (int i = 0; i < Array.length; i++) {
+			if (Array[i]>maxValue) {
+				maxValue = Array[i];
+				
+			}
+		}
+		
+		return maxValue;
+		
+	}
+	
+    public void dispaly() {
+		System.out.print("{");
+
+		for (int i = 0; i < Array.length; i++) {
+			System.out.print(Array[i]);
+
+			System.out.print(" ");
+
+		}
+		System.out.print("}");
+
+	}
+	
+    
+    //searching algorthims 
+    public void binarySearchAlgorthim(int value) {
+		int left = 0;
+		int right =Array.length - 1;
+		int flag =0;
+    	int mid;
+    	int count =0;
+        while (left<right) {
+        	count +=1;
+			mid = (left +right)/2;
+			
+			if (Array[mid]==value) {
+				System.out.println("\n"+value+ " found at index " +(mid+1)+" count is"+count);
+			  flag = 11;
+				break;
+			    
+			}
+			else if (Array[mid]>value) {
+				right = mid-1;
+			}
+			else if (Array[mid]<value) {
+				left = mid+1;
+			}
+			
+		}
+		if (flag==0) {
+			System.out.println("\n"+value+ " could not be found");
+		}
+	}
+    
+
+    public void linarSearchAlgorthim(int value) {
+    	int flag = 0;
+    	int count =0;
+    	for (int i = 0; i < Array.length; i++) {
+    		count +=1;
+			if (Array[i] == value) {
+				System.out.println("\n"+value+ " found at index " +
+			(i+1)+" count is"+count);
+				  flag = 11;
+					break;
+			}
+		}
+		if (flag==0) {
+			System.out.println("\n"+value+ " could not be found");
+		}
+	}
+
+    
+    public void interpoltionSearchAlgorthim(int value) {
+    	int left = 0;
+		int right =Array.length-1 ;
+		int flag =0;
+    	int mid;
+    	int count=0;
+        while (left<right) {
+        	count+=1;
+			mid = left + ((right-left)/(Array[right]-Array[left]))*
+					(value - Array[left]);
+			
+			if (Array[mid]==value) {
+				System.out.println("\n"+value+ " found at index " +(mid+1)+" count is"+count);
+			  flag = 11;
+				break;
+			    
+			}
+			else if (Array[mid]>value) {
+				right = mid-1;
+			}
+			else if (Array[mid]<value) {
+				left = mid+1;
+			}
+			
+		}
+		if (flag==0) {
+			System.out.println("\n"+value+ " could not be found");
+		}
+	}
+
+    
+    
+    //sorting  algorthims 
+
+    
+    
+    
+    
+    
+    
+    public void bubbleSortAlgorthims() {
+		
+    	for (int i = 0; i < Array.length; i++) {
+			
+    		for (int j = 0; j < Array.length-i-1; j++) {
+    			
+				if (this.Array[j]>=this.Array[j+1]) {
+					int temp = Array[j+1];
+					Array[j+1] =   Array[j];
+					Array[j] = temp;
+				}
+			}
+		}
+	}
+
+    public void insertionSortAlgorthims() {
+		int value;
+		int position ;
+		
+		for (int i = 1; i < Array.length; i++) {
+			
+			value = Array[i];
+			position = i;
+			
+			while (position >0 && Array[position-1]>value) {
+			
+				Array[position] = Array[position-1];
+				position--;
+				
+			}
+			Array[position] = value;
+		}
+    	
+	}
+    
+
+}
