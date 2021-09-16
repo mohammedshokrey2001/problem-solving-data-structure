@@ -4,4 +4,4 @@ n,a = int(n),int (a)
 for i in range (1,n+1):
     if (a%i==0) and (a/i<=n):
         count =count +1
-print(count
+print(count)
