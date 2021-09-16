@@ -1,0 +1,77 @@
+package QUEUE;
+
+public class Queue1 {
+
+	private int [] array;	
+	private int Front ;
+	private int Rear;
+	private int size;
+	
+	public Queue1(int size) {
+		
+	   this.size = size;
+	   array = new int[size];
+	   Front = 0;
+	   Rear = -1;
+	}
+	
+	
+	private boolean isFull() {
+      
+		return Rear ==size-1;
+	}
+	
+	
+	private boolean isEmpty() {
+
+		return Rear <0 ||Front>Rear ;
+	}
+	
+	
+	public int peek() {
+		return array[Front];
+	}
+	
+	
+	public void enque(int data) {
+    
+		if (isFull()) {
+			System.out.println("cant add more data the queue is full");
+		}
+		else {
+			Rear = Rear+1;
+			array [Rear] = data;
+		}
+	}
+    
+	
+	public int dequeue() {
+	
+		if (isEmpty()) {
+			System.out.println("cant delete more item the queue is empty");
+		    return -1;
+		}else {
+		
+		int temp = array [Rear];
+		Rear = Rear -1;
+		 return temp;
+		}
+		
+	}
+    
+	
+	public void display() {
+		
+    	System.out.println();
+		System.out.print("{");
+		for (int i = Front; i <=Rear ; i++) {
+			System.out.print(array[i]);
+			System.out.print(" ,");
+
+		}
+		System.out.print("}");
+		
+	}
+ 
+
+}
