@@ -1,0 +1,90 @@
+package LinkedList;
+
+public class SingleLinkedList {
+
+	class SingleNode{
+	  private int value;
+	  private SingleNode nextNode;
+	  
+	  public SingleNode(int value ) {
+		// TODO Auto-generated constructor stub
+		  this.value = value;
+		  this.nextNode = null;
+	}
+	  
+	public int getValue() {
+		return value;
+	}
+	public void setValue(int value) {
+		this.value = value;
+	}
+	public SingleNode getNextNode() {
+		return nextNode;
+	}
+	public void setNextNode(SingleNode nextNode) {
+		this.nextNode = nextNode;
+	}
+	  
+	  
+	}
+	
+	
+	SingleNode headNode;
+	
+	public SingleLinkedList() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void insert(int data) {
+
+		SingleNode node = new SingleNode(data);
+		if (headNode ==null) {
+			headNode = node;
+			
+		}
+		else {
+			node.nextNode = headNode;
+			headNode = node;
+		}
+		
+		
+		
+	}
+
+	public void deletefirst() {
+		headNode = headNode.nextNode;
+		
+	}
+	
+	public void display() {
+		SingleNode node = headNode ;
+		System.out.print("{");
+		while (node!=null) {
+
+			System.out.print(node.value);
+			System.out.print(",");
+
+			node = node.nextNode;
+		}
+		System.out.print("}");
+
+	}
+	
+	public void search(int value) {
+		
+		int count=0;
+		SingleNode node  = headNode;
+		
+		while (node!=null) {
+			count +=1;
+			if (node.value == value) {
+				System.out.println("value "+value +" found at node "+count);
+				break;
+			 }
+			node = node.nextNode;
+		}
+	}
+	
+	
+
+}
