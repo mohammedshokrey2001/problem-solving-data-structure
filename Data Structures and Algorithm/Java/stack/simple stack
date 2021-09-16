@@ -1,0 +1,89 @@
+package Stack;
+
+public class Stack1 {
+	
+      private int TOS;
+      private int size ;  
+      private int [] array ;
+      
+      
+      
+      public Stack1() {
+		// TODO Auto-generated constructor stub
+	    this.size = 10;
+	    System.out.println("you didnt input any size so be carful that the size now is 10");
+      }
+	
+      
+      public Stack1(int size) {
+		// TODO Auto-generated constructor stub
+	    TOS =-1;
+	    array = new int [size];
+	    this.size = size;
+	}
+	
+	
+	public boolean isFull() {
+		if (TOS==size-1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	
+	public boolean isEmpty() {
+		if (TOS==-1) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	
+	public void push(int data) {
+		if (isFull()) {
+			System.out.println("you cant insert more data the stack is full");
+		}
+		else {
+
+			TOS +=1;
+			array[TOS] = data;	
+		}
+	}
+	
+	
+	public int pop() {
+		if (isEmpty()) {
+			System.out.println("you cant delete more data the stack is empty");
+             return -1;
+		}
+		else {
+			
+	
+		int temp = array[TOS];
+        TOS = TOS -1;
+        return temp;
+	}
+}	
+	
+    public int peek() {
+		return array[TOS];
+	}
+
+    
+    public void display() {
+    	System.out.println();
+		System.out.print("{");
+		for (int i = TOS; i >-1 ; i--) {
+			System.out.print(array[i]);
+			System.out.print(" ,");
+
+		}
+		System.out.print("}");
+
+	}
+    
+}
