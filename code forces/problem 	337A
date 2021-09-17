@@ -1,0 +1,12 @@
+def main():
+    nStudent, nPuzzle = [int(x) for x in input().split()]
+    lis_puzzle = [int(x) for x in input().split()]
+    lis_puzzle.sort()
+    mini = 4563646859645
+    for i in range(nStudent,nPuzzle+1,1):
+        mini = min(mini,abs(lis_puzzle[i-1]-lis_puzzle[i-nStudent]))
+    print(mini)
+
+
+if __name__ == '__main__':
+    main()
