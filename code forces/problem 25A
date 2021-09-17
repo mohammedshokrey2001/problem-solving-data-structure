@@ -1,0 +1,19 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+
+    one = []
+    two = []
+    for i in lis :
+        if i %2==0:
+            two.append(i)
+        else:
+            one.append(i)
+    if len(one) == 1:
+         print(lis.index(one[0])+1)
+    else:
+        print(lis.index(two[0])+1)
+
+
+if __name__ == '__main__':
+    main()
