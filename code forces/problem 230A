@@ -1,0 +1,17 @@
+def main():
+    power, n = [int(x) for x in input().split()]
+    for i in range(0, n):
+        pow_drag, bouns = [int(x) for x in input().split()]
+        if power > pow_drag:
+            power = power + bouns
+        else:
+            power = 0
+
+    if power != 0:
+        print("YES")
+    else:
+        print("NO")
+
+
+if __name__ == '__main__':
+    main()
