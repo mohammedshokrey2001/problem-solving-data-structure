@@ -1,16 +1,29 @@
 def main():
+    c = " "
+    lis = []
     power, n = [int(x) for x in input().split()]
     for i in range(0, n):
-        pow_drag, bouns = [int(x) for x in input().split()]
-        if power > pow_drag:
-            power = power + bouns
-        else:
-            power = 0
+        s = [int(x) for x in input().split()]
 
-    if power != 0:
-        print("YES")
+        lis.append(s)
+
+
+    lis.sort()
+
+
+    for i in range(0, len(lis)):
+            pow_drag, bouns = lis[i][0],lis[i][1]
+            if power > pow_drag:
+                power = power + bouns
+                c = 1
+            else:
+                c = 0
+
+    if c != 0:
+          print("YES")
     else:
-        print("NO")
+          print("NO")
+
 
 
 if __name__ == '__main__':
