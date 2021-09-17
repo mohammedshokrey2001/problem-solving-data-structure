@@ -1,0 +1,16 @@
+def main():
+    str = input()
+    str = str.replace("WUB", ".")
+    lis = list(str.split("."))
+    st = ""
+    del  str
+
+    for i in lis :
+        if len(i)>0:
+            st = st + i +" "
+
+    print(st)
+
+
+if __name__ == '__main__':
+    main()
