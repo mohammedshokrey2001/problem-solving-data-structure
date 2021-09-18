@@ -1,0 +1,23 @@
+def main():
+    n_rides, n_rides_sp_order, price_single, price_sp = [int(x) for x in input().split()]
+    total = 0
+    if n_rides * price_single < (n_rides / n_rides_sp_order) * price_sp:
+        total = total + n_rides * price_single
+
+    else:
+        while n_rides > 0:
+            if n_rides > n_rides_sp_order:
+                total = total + price_sp
+                n_rides = n_rides - n_rides_sp_order
+            else:
+                a = n_rides * price_single
+                if a < price_sp:
+                    total = total + a
+                else:
+                    total = total + price_sp
+                break
+    print(total)
+
+
+if __name__ == '__main__':
+    main()
