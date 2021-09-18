@@ -1,0 +1,34 @@
+def main():
+    n = int(input())
+    for i in range(0,n):
+        lis = []
+        n_arr = int(input())
+        one = 2
+        sum_lef = 0
+        sum_rig = 0
+        two = 1
+        for x in range(0,int(n_arr/2)):
+            sum_lef = sum_lef + one
+            lis.append(one)
+            one =one +2
+
+        for x in range(0, int(n_arr / 2)-1):
+            sum_rig = sum_rig + two
+            lis.append(two)
+            two = two + 2
+
+        final_rig = sum_lef - sum_rig
+        if final_rig %2!=0:
+            lis.append(final_rig)
+            print("YES")
+            for i in lis:
+                print(i,sep=" ",end=" ")
+            print()
+        else:
+            print("NO")
+
+
+
+
+if __name__ == '__main__':
+    main()
