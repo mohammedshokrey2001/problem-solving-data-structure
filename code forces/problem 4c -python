@@ -1,0 +1,17 @@
+def main():
+    lis = []
+    x = {}
+    n = int(input())
+    for i in range(0, n):
+        inp = input()
+        find = x.get(inp)
+        if find==None:
+            x[inp] = 1
+            print("OK")
+        else:
+            print(inp+str(find))
+            x[inp] = x.get(inp) +1
+
+
+if __name__ == '__main__':
+    main()
