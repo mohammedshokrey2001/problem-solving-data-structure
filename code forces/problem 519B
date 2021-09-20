@@ -1,0 +1,13 @@
+def main():
+    n = int(input())
+    lis1 = [int(x) for x in input().split()]
+    lis2 = [int(x) for x in input().split()]
+    lis3 = [int(x) for x in input().split()]
+
+    print(sum(lis1)-sum(lis2))
+    print(sum(lis2)-sum(lis3))
+
+
+
+if __name__ == '__main__':
+    main()
