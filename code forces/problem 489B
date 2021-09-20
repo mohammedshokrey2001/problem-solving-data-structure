@@ -1,0 +1,18 @@
+def main():
+    n_b = int(input())
+    boys = [int(x) for x in input().split()]
+    n_g = int(input())
+    girls = [int(x) for x in input().split()]
+    boys.sort()
+    girls.sort()
+    pairs = 0
+    for i in range(0, n_b):
+        for x in range(0, n_g):
+            if abs(boys[i] - girls[x] )< 2:
+                girls[x] =1000
+                pairs = pairs + 1
+                break
+    print(pairs)
+
+if __name__ == '__main__':
+    main()
