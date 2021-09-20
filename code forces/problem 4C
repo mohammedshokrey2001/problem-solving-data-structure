@@ -1,0 +1,39 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+ 
+public class work {
+ 
+	public work() {
+		// TODO Auto-generated constructor stub
+	}
+ 
+	public static void main(String[] args) {
+		 Scanner reader = new Scanner(System.in);
+ 
+		Map<String, Integer> database = new HashMap<String, Integer>();
+ 
+		int n = reader.nextInt();
+ 
+		for (int i = 0; i < n; i++) {
+			String xString  = reader.next();
+			 //int count =database.get(xString);
+			 if (database.get(xString)==null) {
+				System.out.println("OK");
+				database.put(xString, 1);
+ 
+			}else {
+ 
+				int count =database.get(xString);
+				System.out.println((xString+database.get(xString)));
+				database.replace(xString,count ,count+1 );
+ 
+			}
+		}
+ 
+ 
+ 
+ 
+	}
+ 
+}
