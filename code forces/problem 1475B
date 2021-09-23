@@ -1,0 +1,14 @@
+def main():
+    n = int(input())
+    for i in range(0, n):
+        x = int(input())
+        mod = x % 2020
+        div = x / 2020
+        if mod <= div:
+            print("YES")
+        else:
+            print("NO")
+
+
+if __name__ == '__main__':
+    main()
