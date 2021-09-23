@@ -1,0 +1,17 @@
+def main():
+    n = int(input())
+    for i in range(0, n):
+        x = int(input())
+        lis = [int(x) for x in input().split()]
+        a, b = lis.count(1), lis.count(2)
+        if (a == 2 * b) or (a == b and a % 2 == 0) or (a == len(lis) and b == 0 and a % 2 == 0) or (
+                b == len(lis) and a == 0 and b % 2 == 0) or (a % 2 == 0 and b % 2 != 0 and a != 0) \
+                or (a % 2 == 0 and b % 2 == 0):
+
+            print("YES")
+        else:
+            print("NO")
+
+
+if __name__ == '__main__':
+    main()
