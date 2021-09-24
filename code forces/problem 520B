@@ -1,0 +1,21 @@
+def main():
+    n ,m = [int(x) for x in input().split()]
+    count = 0
+    while n !=m:
+        if m > n :
+            if m%2==0:
+                m = m /2
+                count = count + 1
+            else:
+                count = count +1
+                m = m +1
+        elif n>m :
+            m = m +1
+            count = count +1
+    print(count)
+
+
+
+
+if __name__ == '__main__':
+    main()
