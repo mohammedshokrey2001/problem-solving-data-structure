@@ -1,0 +1,16 @@
+def main():
+    a ,b = [int(x) for x in input().split()]
+
+    x = 0
+    if a > b:
+        x = b
+    else:
+        x = a
+    if x % 2 == 0:
+        print("Malvika")
+    else:
+        print("Akshat")
+
+
+if __name__ == '__main__':
+    main()
