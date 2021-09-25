@@ -1,0 +1,13 @@
+def main():
+
+    n,k = [int(x) for x in input().split()]
+    lis_players = [int(x) for x in input().split()]
+    valid = 0
+    for i in lis_players:
+        if i+k<=5:
+            valid +=1
+    print(int(valid/3))
+
+
+if __name__ == '__main__':
+    main()
