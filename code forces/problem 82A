@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+
+public class test {
+
+	public static void main(String[] args) {
+	  Scanner reaScanner = new Scanner(System.in);
+        
+	    String[] nameStrings = { "Sheldon", "Leonard", "Penny", "Rajesh", "Howard" };
+	    int n = reaScanner.nextInt();
+	    int x = 1;
+	    
+	    while (x*5<n) {
+			n -=5*x;
+			x *=2;
+			
+		}
+	    int item = (n-1)/x;
+		
+	    System.out.println(nameStrings[item] );
+	}
+
+}
