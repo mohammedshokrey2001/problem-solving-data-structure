@@ -1,0 +1,23 @@
+def main():
+    n = int(input())
+    lis = [int(x) for x in input().split()]
+    ans = 0
+    one = lis.count(1)
+    sumo = 0
+    for i in lis:
+        if i == 0:
+            sumo += 1
+        else:
+            sumo -= 1
+        ans = max(ans, sumo)
+        if sumo < 0:
+            sumo = 0
+
+    if one == n:
+        print(n - 1)
+    else:
+        print(one + ans)
+
+
+if __name__ == '__main__':
+    main()
