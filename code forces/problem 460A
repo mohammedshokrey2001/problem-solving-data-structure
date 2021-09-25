@@ -1,0 +1,16 @@
+def main():
+    n, m = [int(x) for x in input().split()]
+    count = 0
+    c = 1
+    while c < n+1:
+        if c % m == 0:
+            n += 1
+
+        count += 1
+        c = c +1
+
+    print(count)
+
+
+if __name__ == '__main__':
+    main()
