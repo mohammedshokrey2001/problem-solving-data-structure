@@ -1,0 +1,16 @@
+def main():
+    n = int(input())
+
+    for x in range(0, n):
+        re = int(input())
+        lis = [int(x) for x in input().split()]
+        mn = min(lis)
+        count = 0
+        for i in lis:
+            if i > mn:
+                count += 1
+        print(count)
+
+
+if __name__ == '__main__':
+    main()
