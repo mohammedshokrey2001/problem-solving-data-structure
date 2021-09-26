@@ -1,0 +1,28 @@
+def main():
+    n = int(input())
+
+    for x in range(0, n):
+        re = int(input())
+        lis_1 = [int(x) for x in input().split()]
+        lis_2 = [int(x) for x in input().split()]
+        count = 0
+
+        for i in range(0, len(lis_1)):
+
+            if lis_2[i] > min(lis_2) and lis_1[i] > min(lis_1):
+                x = lis_1[i] - min(lis_1)
+                y = lis_2[i] - min(lis_2)
+                count += min(x, y)
+                count += (max(x, y) - min(x, y))
+
+            elif lis_1[i] > min(lis_1):
+                count += lis_1[i] - min(lis_1)
+
+            elif lis_2[i] > min(lis_2):
+                count += lis_2[i] - min(lis_2)
+
+        print(count)
+
+
+if __name__ == '__main__':
+    main()
