@@ -1,0 +1,16 @@
+def main():
+    n = int(input())
+
+    for x in range(0, n):
+        re = int(input())
+        lis_1 = [int(x) for x in input().split()]
+        lis_1.sort()
+        count = []
+        for i in range(1, len(lis_1)):
+            c = abs(lis_1[i]-lis_1[i-1])
+            count.append(c)
+        print(min(count))
+
+
+if __name__ == '__main__':
+    main()
