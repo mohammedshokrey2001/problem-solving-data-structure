@@ -1,0 +1,17 @@
+def main():
+    tv_n, carry = [int(x) for x in input().split()]
+    lis = [int(x) for x in input().split()]
+    lis.sort()
+    s = 0
+    c = 0
+    while c < len(lis) and c < carry:
+        if lis[c] <= 0:
+            s += lis[c]
+        else:
+            break
+        c = c + 1
+    print(abs(s))
+
+
+if __name__ == '__main__':
+    main()
