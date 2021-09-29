@@ -1,0 +1,12 @@
+def main():
+    n = int(input())
+    s = list(input())
+    count_1 = s.count("0")
+    c_zero = s.count("1")
+
+    x = abs(c_zero - count_1)
+    print(x)
+
+
+if __name__ == '__main__':
+    main()
