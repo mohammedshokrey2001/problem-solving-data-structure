@@ -1,0 +1,31 @@
+def main():
+    s1 = "qwertyuiop"
+    s2 = "asdfghjkl;"
+    s3 = "zxcvbnm,./"
+
+    statment = ""
+
+    way = input()
+    st = input()
+    if way == "L":
+        for i in st:
+            if i in s1:
+                statment += s1[s1.find(i) + 1]
+            elif i in s2:
+                statment += s2[s2.find(i) + 1]
+            elif i in s3:
+                statment += s3[s3.find(i) + 1]
+    elif way == "R":
+        for i in st:
+            if i in s1:
+                statment += s1[s1.find(i) - 1]
+            elif i in s2:
+                statment += s2[s2.find(i) - 1]
+            elif i in s3:
+                statment += s3[s3.find(i) - 1]
+
+    print(statment)
+
+
+if __name__ == '__main__':
+    main()
