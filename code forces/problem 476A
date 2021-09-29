@@ -1,0 +1,15 @@
+def main():
+    n, m = [int(x) for x in input().split()]
+    if n < m:
+        print(-1)
+
+    else:
+        x = 1
+        c = m
+        while c * 2 < n:
+            x += 1
+            c = m*x
+        print(c)
+
+if __name__ == '__main__':
+    main()
