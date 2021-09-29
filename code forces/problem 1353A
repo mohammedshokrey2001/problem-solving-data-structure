@@ -1,0 +1,9 @@
+def main():
+    c = int(input())
+    for i in range(0,c):
+        n, m = [int(x) for x in input().split()]
+        print(min(2,n-1)*m)
+
+
+if __name__ == '__main__':
+    main()
