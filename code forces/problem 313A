@@ -1,0 +1,24 @@
+def main():
+    n = int(input())
+    if n > 0:
+        print(n)
+        return 0
+    else:
+        st = str(n)
+        lis = []
+        last ,before_last = int(st[len(st)-1]),int(st[len(st)-2])
+        if last >before_last:
+            st = st[:len(st)-1]
+        else:
+            st =st [:len(st)-2] +st[len(st)-1]
+
+        if st[1]=="0" and int (st)==0:
+            print(0)
+        else:
+            print(st)
+
+
+
+
+if __name__ == '__main__':
+    main()
