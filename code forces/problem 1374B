@@ -1,0 +1,26 @@
+def main():
+    n = int(input())
+    for i in range(0, n):
+
+        x = int(input())
+        m = x
+        c = 0
+        count = 0
+
+        
+
+        while x % 6 == 0:
+            x /= 6
+            count += 1
+        while x % 3 == 0:
+            x /= 3
+            count += 2
+
+        if x == 1:
+            print(count)
+        else:
+            print(-1)
+
+
+if __name__ == '__main__':
+    main()
