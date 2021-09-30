@@ -1,0 +1,22 @@
+def main():
+    n_cell, cell_wanted = [int(x) for x in input().split()]
+    lis = [int(x) for x in input().split()]
+    cell_wanted -= 1
+    cell_now = 0
+
+    while cell_now < n_cell:
+        if cell_wanted == cell_now:
+            print("YES")
+            return 0
+        elif cell_now > cell_wanted:
+            print("NO")
+            return 0
+        else:
+            cell_now += lis[cell_now]
+            if cell_now > cell_wanted:
+                print("NO")
+                return 0
+
+
+if __name__ == '__main__':
+    main()
