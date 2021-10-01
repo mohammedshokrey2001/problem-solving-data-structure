@@ -1,0 +1,15 @@
+def main():
+    t = int(input())
+    for i in range(0, t):
+        n, k = [int(x) for x in input().split()]
+        if k * k <= n:
+            if (n + k) % 2 == 0:
+                print("YES")
+            else:
+                print("NO")
+        else:
+            print("NO")
+
+
+if __name__ == '__main__':
+    main()
