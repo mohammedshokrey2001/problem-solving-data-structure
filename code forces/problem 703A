@@ -1,0 +1,19 @@
+def main():
+    t = int(input())
+    m, c = 0, 0
+    for i in range(0, t):
+        Mishka, Chris = [int(x) for x in input().split()]
+        if Mishka > Chris:
+            m += 1
+        elif Mishka < Chris:
+            c += 1
+    if m > c:
+        print("Mishka")
+    elif m == c:
+        print("Friendship is magic!^^")
+    elif c > m:
+        print("Chris")
+
+
+if __name__ == '__main__':
+    main()
