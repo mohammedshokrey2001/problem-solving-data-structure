@@ -1,0 +1,24 @@
+def main():
+    n_book, time = [int(x) for x in input().split()]
+    lis = [int(x) for x in input().split()]
+    c = 0
+    sum = 0
+    j = -1
+    for i in range(0, len(lis)):
+
+        if sum + lis[i] <= time:
+            sum += lis[i]
+        else:
+            sum += lis[i]
+
+            while sum > time:
+                j += 1
+                sum -= lis[j]
+
+        c = max(c, (i - j))
+
+    print(c)
+
+
+if __name__ == '__main__':
+    main()
