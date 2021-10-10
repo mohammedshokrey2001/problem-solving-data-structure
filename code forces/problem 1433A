@@ -1,0 +1,21 @@
+def main():
+    n = int(input())
+    lis = ["1", "11", "111", "1111"]
+    for i in range(0, n):
+        x = input()
+        count = 0
+        count += (int(x[0]) - 1) * 10
+
+        if len(x) == 1:
+            count += 1
+        elif len(x) == 2:
+            count += 3
+        elif len(x) == 3:
+            count += 6
+        elif len(x) == 4:
+            count += 10
+        print(count)
+
+
+if __name__ == '__main__':
+    main()
