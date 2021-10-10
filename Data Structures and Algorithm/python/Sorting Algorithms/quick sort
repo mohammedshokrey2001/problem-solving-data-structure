@@ -1,0 +1,18 @@
+def quickSortAlgo(lis):
+    if len(lis) < 2:
+        return lis
+    else:
+        pivot = lis[0]
+        less = [x for x in lis[1:] if x <= pivot]
+        greater = [x for x in lis[1:] if x > pivot]
+        return quickSortAlgo(less) + [pivot] + quickSortAlgo(greater)
+
+
+def main():
+    lis = [2, 45, 9, 3, 86, 6354, 7, 264, 4, 80]
+    x = quickSortAlgo(lis)
+    print(x)
+
+
+if __name__ == '__main__':
+    main()
