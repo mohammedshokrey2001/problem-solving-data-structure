@@ -1,0 +1,24 @@
+def main():
+    num, words = [int(x) for x in input().split()]
+    lang1 = []
+    lang2 = []
+
+    for i in range(0, words):
+        a, b = input().split()
+        lang1.append(a)
+        lang2.append(b)
+    comp_word = input().split()
+    st =""
+
+    for i in comp_word:
+        if i in lang1:
+            x = lang1.index(i)
+            if len(lang1[x]) <= len(lang2[x]):
+                st += lang1[x]+" "
+            else:
+                st += lang2[x]+" "
+    print(st)
+
+
+if __name__ == '__main__':
+    main()
